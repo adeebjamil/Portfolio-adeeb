@@ -155,13 +155,15 @@ const About = () => {
 
               {/* Main Image Container */}
               <div className="relative w-full h-full rounded-2xl overflow-hidden glass">
-                <div className="absolute inset-0 bg-gradient-to-br from-accent/20 to-accent/5 z-10" />
+                <div className="absolute inset-0 bg-gradient-to-br from-accent/10 to-transparent z-10" />
                 <Image
-                  src="/adeeb.jpeg"
+                  src="/adeeb.png"
                   alt="Adeeb Jamil"
                   fill
-                  className="object-cover"
+                  className="object-cover object-top scale-105"
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   priority
+                  quality={100}
                 />
                 
                 {/* Animated Border */}

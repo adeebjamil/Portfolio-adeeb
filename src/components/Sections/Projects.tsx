@@ -14,7 +14,8 @@ const projects = [
     id: 1,
     title: 'LOVOCARZ',
     subtitle: 'Car Blog Web App',
-    description: 'Next.js 15 + Tailwind + 3D Car Models (React Three Fiber) + Admin Panel. A premium automotive blog with interactive 3D car models and content management.',
+    duration: '2022 - 2023',
+    description: 'A modern full-stack car blog platform built using Next.js 15, Tailwind CSS, MongoDB Atlas, and interactive 3D car models with React Three Fiber. Includes Framer Motion animations, role-based access control, search, filtering, admin dashboard, and media uploads.',
     tech: ['Next.js 15', 'Tailwind CSS', 'React Three Fiber', 'MongoDB'],
     image: '/lovocarz.jpeg',
     liveUrl: 'https://lovocar-z.vercel.app/',
@@ -25,7 +26,8 @@ const projects = [
     id: 2,
     title: 'EHRMS',
     subtitle: 'HR Management System',
-    description: 'Complete Employee Human Resource Management System with attendance tracking, leave management, role-based access control, and comprehensive dashboard analytics.',
+    duration: '2024 - 2025',
+    description: 'A complete HRMS solution featuring employee creation, attendance tracking, leave management, and role-based access. Built with Next.js, MongoDB, and Tailwind CSS.',
     tech: ['Next.js', 'Node.js', 'MongoDB', 'JWT Auth'],
     image: '/erhms.jpeg',
     liveUrl: 'https://oms-frontend-beta.vercel.app/',
@@ -36,7 +38,8 @@ const projects = [
     id: 3,
     title: 'LOVOCHATS',
     subtitle: 'Real-Time Chat Application',
-    description: 'Modern real-time chat application with instant messaging, image sharing via Cloudinary, Redis for caching, and seamless user experience.',
+    duration: '2023 - 2024',
+    description: 'Developed a real-time chat app using React (Vite), Node.js, Express, and Socket.IO. Features Google OAuth, JWT authentication, file uploads via Cloudinary, MongoDB for data storage, Redis caching, and real-time events like typing indicators, message reactions, and read receipts.',
     tech: ['React', 'Node.js', 'Socket.io', 'Redis', 'Cloudinary'],
     image: '/lovochats.jpeg',
     liveUrl: 'https://lovo-chat.vercel.app/',
@@ -47,7 +50,8 @@ const projects = [
     id: 4,
     title: 'Apni Dukaan',
     subtitle: 'E-Commerce Platform',
-    description: 'Full-featured grocery e-commerce platform with secure authentication, JWT tokens, session management, and OAuth integration.',
+    duration: '2022 - 2023',
+    description: 'A secure login authentication system with email/mobile-based login for an e-commerce portal. Includes session handling, password reset, and OAuth using Node.js and JWT.',
     tech: ['React', 'JWT', 'OAuth', 'Node.js'],
     image: '/apnidukan.jpeg',
     liveUrl: 'https://grocery-frontend-lime.vercel.app/',
@@ -58,6 +62,7 @@ const projects = [
     id: 5,
     title: '99 Homes',
     subtitle: 'Real Estate Lead Generation',
+    duration: '2023 - 2024',
     description: 'High-conversion real estate lead generation platform featuring video-powered hero section, modern UI/UX, dynamic property listings, and WhatsApp-based lead capture with premium branding and smooth animations.',
     tech: ['Next.js', 'Tailwind CSS', 'Framer Motion', 'WhatsApp API'],
     image: '/99Homes.jpeg',
@@ -69,7 +74,8 @@ const projects = [
     id: 6,
     title: 'School Management',
     subtitle: 'Multi-Tenant SaaS',
-    description: 'Enterprise-grade multi-tenant school management system with subdomain-based architecture, Razorpay billing integration, and comprehensive ERP features.',
+    duration: '2025 - Present',
+    description: 'Developing a multi-tenant SaaS School ERP with separate databases per school. Includes modules for student management, teachers, parents, classes, exams, attendance, library, timetable, and transport. Backend built with Laravel, frontend using Next.js, with subscription billing via Razorpay.',
     tech: ['Laravel', 'Next.js', 'Razorpay', 'Multi-tenant'],
     image: '/projects/school.jpg',
     liveUrl: null,
@@ -217,10 +223,15 @@ const ProjectCard = ({ project, index }: { project: typeof projects[0]; index: n
               </h3>
               <p className="text-xs sm:text-sm text-text-secondary">{project.subtitle}</p>
             </div>
-            <div 
-              className="w-3 h-3 rounded-full"
-              style={{ backgroundColor: project.color, boxShadow: `0 0 10px ${project.color}` }}
-            />
+            <div className="flex flex-col items-end gap-1">
+              <div 
+                className="w-3 h-3 rounded-full"
+                style={{ backgroundColor: project.color, boxShadow: `0 0 10px ${project.color}` }}
+              />
+              <span className="text-[10px] sm:text-xs text-accent font-medium">
+                {project.duration}
+              </span>
+            </div>
           </div>
           
           <p className="text-text-secondary text-xs sm:text-sm mb-3 sm:mb-4 line-clamp-2">
